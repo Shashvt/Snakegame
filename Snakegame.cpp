@@ -6,8 +6,6 @@
 
 using namespace std;
 
-/* ---------- Keyboard Handling for macOS ---------- */
-
 bool kbhit()
 {
     termios oldt, newt;
@@ -53,7 +51,7 @@ char getch()
     return buf;
 }
 
-/* ---------- Game Variables ---------- */
+
 
 bool gameOver;
 const int width = 20;
@@ -65,7 +63,7 @@ int nTail;
 enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir;
 
-/* ---------- Game Functions ---------- */
+
 
 void Setup()
 {
@@ -187,7 +185,7 @@ void Logic()
     }
 }
 
-/* ---------- Main ---------- */
+
 
 int main()
 {
@@ -197,7 +195,7 @@ int main()
         Draw();
         Input();
         Logic();
-        usleep(100000);   // 100 ms delay
+        usleep(100000);   
     }
 
     system("clear");
